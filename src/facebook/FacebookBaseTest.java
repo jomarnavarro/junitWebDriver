@@ -10,7 +10,7 @@ public class FacebookBaseTest {
 	
 	protected WebDriver driver;
 	
-	protected void setUp(String browser, String url) {
+	public void setUp(String browser, String url) {
 		System.out.println("Arranca el browser porfa y navega a la pagina.");
 		driver = new ChromeDriver();
 		driver.get(url);
@@ -18,7 +18,7 @@ public class FacebookBaseTest {
 	}
 	
 	@After
-	protected void tearDown() {
+	public void tearDown() {
 		System.out.println("Destruye la configuracion");
 		driver.quit();
 	}
