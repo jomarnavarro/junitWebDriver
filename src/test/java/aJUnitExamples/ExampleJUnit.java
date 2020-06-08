@@ -1,17 +1,14 @@
-package junit_examples;
+package aJUnitExamples;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 public class ExampleJUnit extends ParentTest {
 	
 	
 	
-//	@Test
+	@Test
 	public void testSomething0() {
 		System.out.println("Metodo de prueba 0");
-
 	}
 	
 	@Test

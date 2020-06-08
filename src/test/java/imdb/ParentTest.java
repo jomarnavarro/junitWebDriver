@@ -17,13 +17,17 @@ public class ParentTest {
 	
 	protected WebDriver driver;
 	protected WebDriverWait wait;
+	public static final int SHORT_WAIT = 5;
+	public static final int MEDIUM_WAIT = 10;
+	public static final int LONG_WAIT = 15;
+
 	
 	@Before
 	public void setUp() {
 		
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		wait = new WebDriverWait(driver, 5);		
+		driver.manage().timeouts().implicitlyWait(SHORT_WAIT, TimeUnit.SECONDS);
+		wait = new WebDriverWait(driver, LONG_WAIT);
 	}
 	
 	@After
@@ -32,11 +36,9 @@ public class ParentTest {
 		
 	}
 	protected void validateMovieExists(String movieName) {
-		// TODO Auto-generated method stub
-		WebElement resultado = driver.findElement(By.linkText(movieName));
-		wait.until(ExpectedConditions.visibilityOf(resultado));
-		assertTrue(resultado.isDisplayed());
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(movieName)));
 	}
+
 	protected void searchMovie(String movieName) {
 
 		//encontrar el campo de busqueda name= "q"

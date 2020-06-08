@@ -1,6 +1,8 @@
 # Compiled class file
 *.class
-
+target/
+junitwebDriver.iml
+.idea/
 # Log file
 *.log
 

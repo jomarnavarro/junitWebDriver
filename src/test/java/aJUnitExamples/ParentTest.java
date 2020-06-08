@@ -1,4 +1,4 @@
-package junit_examples;
+package aJUnitExamples;
 
 import org.junit.After;
 import org.junit.Before;
