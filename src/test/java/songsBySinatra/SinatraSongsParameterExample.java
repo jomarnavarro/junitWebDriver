@@ -13,16 +13,8 @@ public class SinatraSongsParameterExample extends SinatraSongBaseTest {
 	@FileParameters("./data/params.csv")
 	public void testSinatraLogin(String browser, String url,
 			String user, String password) {
-		
 		setUp(browser, url);
-		
 		logIntoSinatra(user, password);
-		
 		validateUserLogged(user);
-		
 	}
-
-
-
-
 }
